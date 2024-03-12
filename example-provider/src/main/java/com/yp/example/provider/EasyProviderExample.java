@@ -1,6 +1,7 @@
 package com.yp.example.provider;
 
 import com.yp.example.common.service.UserService;
+import com.yp.rpc.RpcApplication;
 import com.yp.rpc.register.LocalRegister;
 import com.yp.rpc.server.VertxHttpServer;
 
@@ -11,9 +12,10 @@ import com.yp.rpc.server.VertxHttpServer;
 public class EasyProviderExample {
 
     public static void main(String[] args) {
+        RpcApplication.init();
         LocalRegister.register(UserService.class.getName(), UserServiceImpl.class);
 
         VertxHttpServer vertxHttpServer = new VertxHttpServer();
-        vertxHttpServer.doStart(8080);
+        vertxHttpServer.doStart(RpcApplication.getRpcConfig().getServerPort());
     }
 }
