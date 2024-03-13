@@ -16,4 +16,6 @@ public class RpcConfig {
     private String serverHost = "localhost";
 
     private Integer serverPort = 8080;
+
+    private boolean mock = false;
 }
