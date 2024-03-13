@@ -1,5 +1,6 @@
 package com.yp.rpc.config;
 
+import com.yp.rpc.serializer.SerializerKeys;
 import lombok.Data;
 
 /**
@@ -18,4 +19,6 @@ public class RpcConfig {
     private Integer serverPort = 8080;
 
     private boolean mock = false;
+
+    private String serializer = SerializerKeys.JDK;
 }

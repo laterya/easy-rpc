@@ -2,6 +2,7 @@ package com.yp.rpc;
 
 import com.yp.rpc.config.RpcConfig;
 import com.yp.rpc.constant.RpcConstant;
+import com.yp.rpc.serializer.SerializerFactory;
 import com.yp.rpc.utils.ConfigUtils;
 import lombok.extern.slf4j.Slf4j;
 
@@ -38,5 +39,9 @@ public class RpcApplication {
             }
         }
         return rpcConfig;
+    }
+
+    public static void main(String[] args) {
+        SerializerFactory.getInstance("jdk");
     }
 }
