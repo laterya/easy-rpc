@@ -1,6 +1,6 @@
 package com.yp.rpc.server.tcp;
 
-import com.yp.rpc.server.HttpServer;
+import com.yp.rpc.server.http.HttpServer;
 import io.vertx.core.Vertx;
 import io.vertx.core.net.NetServer;
 

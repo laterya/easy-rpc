@@ -1,4 +1,4 @@
-package com.yp.rpc.server;
+package com.yp.rpc.server.http;
 
 import com.yp.rpc.RpcApplication;
 import com.yp.rpc.model.RpcRequest;
