@@ -1,5 +1,6 @@
 package com.yp.rpc.config;
 
+import com.yp.rpc.fault.retry.RetryStrategyKeys;
 import com.yp.rpc.loadbalancer.LoadBalancerKeys;
 import com.yp.rpc.serializer.SerializerKeys;
 import lombok.Data;
@@ -30,4 +31,6 @@ public class RpcConfig {
     private RegistryConfig registryConfig = new RegistryConfig();
 
     private String loadBalancer = LoadBalancerKeys.ROUND_ROBIN;
+
+    private String retryStrategy = RetryStrategyKeys.NO;
 }

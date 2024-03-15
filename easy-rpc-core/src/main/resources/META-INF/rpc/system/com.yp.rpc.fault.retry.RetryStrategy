@@ -1,0 +1,2 @@
+no=com.yp.rpc.fault.retry.impl.NoRetryStrategy
+fixedInterval=com.yp.rpc.fault.retry.impl.FixedIntervalRetryStrategy

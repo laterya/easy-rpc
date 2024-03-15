@@ -1,5 +1,6 @@
-package com.yp.rpc.loadbalancer;
+package com.yp.rpc.loadbalancer.impl;
 
+import com.yp.rpc.loadbalancer.LoadBalancer;
 import com.yp.rpc.model.ServiceMetaInfo;
 
 import java.util.List;
@@ -10,7 +11,7 @@ import java.util.Random;
  * @author yp
  * @date: 2024/3/15
  */
-public class RandomLoadBalancer implements LoadBalancer{
+public class RandomLoadBalancer implements LoadBalancer {
 
     private final Random random = new Random();
 

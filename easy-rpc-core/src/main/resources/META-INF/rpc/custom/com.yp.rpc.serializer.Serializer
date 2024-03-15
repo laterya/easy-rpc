@@ -1,2 +1,2 @@
-jdk=com.yp.rpc.serializer.JdkSerializer
-hessian=com.yp.rpc.serializer.HessianSerializer
+jdk=com.yp.rpc.serializer.impl.JdkSerializer
+hessian=com.yp.rpc.serializer.impl.HessianSerializer

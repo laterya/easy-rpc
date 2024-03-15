@@ -1,7 +1,8 @@
-package com.yp.rpc.serializer;
+package com.yp.rpc.serializer.impl;
 
 import com.caucho.hessian.io.HessianInput;
 import com.caucho.hessian.io.HessianOutput;
+import com.yp.rpc.serializer.Serializer;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;

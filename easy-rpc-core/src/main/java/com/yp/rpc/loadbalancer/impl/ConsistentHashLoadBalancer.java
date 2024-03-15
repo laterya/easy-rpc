@@ -1,5 +1,6 @@
-package com.yp.rpc.loadbalancer;
+package com.yp.rpc.loadbalancer.impl;
 
+import com.yp.rpc.loadbalancer.LoadBalancer;
 import com.yp.rpc.model.ServiceMetaInfo;
 
 import java.util.List;

@@ -1,4 +1,6 @@
-package com.yp.rpc.serializer;
+package com.yp.rpc.serializer.impl;
+
+import com.yp.rpc.serializer.Serializer;
 
 import java.io.*;
 

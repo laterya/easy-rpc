@@ -1,5 +1,6 @@
 package com.yp.rpc.loadbalancer;
 
+import com.yp.rpc.loadbalancer.impl.RoundRobinLoadBalancer;
 import com.yp.rpc.spi.SpiLoader;
 
 /**

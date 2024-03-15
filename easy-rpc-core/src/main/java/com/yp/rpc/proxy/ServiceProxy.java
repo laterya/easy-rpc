@@ -4,6 +4,8 @@ import cn.hutool.core.collection.CollUtil;
 import com.yp.rpc.RpcApplication;
 import com.yp.rpc.config.RpcConfig;
 import com.yp.rpc.constant.RpcConstant;
+import com.yp.rpc.fault.retry.RetryStrategy;
+import com.yp.rpc.fault.retry.RetryStrategyFactory;
 import com.yp.rpc.loadbalancer.LoadBalancer;
 import com.yp.rpc.loadbalancer.LoadBalancerFactory;
 import com.yp.rpc.model.RpcRequest;
@@ -58,7 +60,8 @@ public class ServiceProxy implements InvocationHandler {
             ServiceMetaInfo selectedServiceMetaInfo = loadBalancer.select(requestParams, serviceMetaInfoList);
 
             // 发送 TCP 请求
-            RpcResponse rpcResponse = VertxTcpClient.doRequest(rpcRequest, selectedServiceMetaInfo);
+            RetryStrategy retryStrategy = RetryStrategyFactory.getInstance(rpcConfig.getRetryStrategy());
+            RpcResponse rpcResponse = retryStrategy.doRetry(() -> VertxTcpClient.doRequest(rpcRequest, selectedServiceMetaInfo));
             return rpcResponse.getData();
         } catch (Exception e) {
             e.printStackTrace();

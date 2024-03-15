@@ -1,5 +1,6 @@
 package com.yp.rpc.loadbalancer;
 
+import com.yp.rpc.loadbalancer.impl.ConsistentHashLoadBalancer;
 import org.junit.Test;
 
 import java.util.HashMap;
