@@ -7,4 +7,6 @@ package com.yp.rpc.constant;
 public interface RpcConstant {
 
     String DEFAULT_CONFIG_PREFIX = "easy-rpc";
+
+    String DEFAULT_SERVICE_VERSION = "1.0";
 }

@@ -1,7 +1,10 @@
 package com.yp.rpc;
 
+import com.yp.rpc.config.RegistryConfig;
 import com.yp.rpc.config.RpcConfig;
 import com.yp.rpc.constant.RpcConstant;
+import com.yp.rpc.register.RegisterFactory;
+import com.yp.rpc.register.Registry;
 import com.yp.rpc.serializer.SerializerFactory;
 import com.yp.rpc.utils.ConfigUtils;
 import lombok.extern.slf4j.Slf4j;
@@ -18,6 +21,11 @@ public class RpcApplication {
     public static void init(RpcConfig newRpcConfig) {
         rpcConfig = newRpcConfig;
         log.info("rpc init, config = {}", newRpcConfig.toString());
+        // 注册中心初始化
+        RegistryConfig registryConfig = rpcConfig.getRegistryConfig();
+        Registry registry = RegisterFactory.getInstance(registryConfig.getRegistry());
+        registry.init(registryConfig);
+        log.info("registry init, config = {}", registryConfig);
     }
 
     public static void init() {
