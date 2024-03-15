@@ -8,7 +8,7 @@ import com.yp.rpc.model.ServiceMetaInfo;
 import com.yp.rpc.register.LocalRegister;
 import com.yp.rpc.register.RegisterFactory;
 import com.yp.rpc.register.Registry;
-import com.yp.rpc.server.VertxHttpServer;
+import com.yp.rpc.server.tcp.VertxTcpServer;
 
 /**
  * @author yp
@@ -34,7 +34,7 @@ public class EasyProviderExample {
         } catch (Exception e) {
             throw new RuntimeException("注册服务失败", e);
         }
-        VertxHttpServer vertxHttpServer = new VertxHttpServer();
-        vertxHttpServer.doStart(RpcApplication.getRpcConfig().getServerPort());
+        VertxTcpServer vertxTcpServer = new VertxTcpServer();
+        vertxTcpServer.doStart(RpcApplication.getRpcConfig().getServerPort());
     }
 }
