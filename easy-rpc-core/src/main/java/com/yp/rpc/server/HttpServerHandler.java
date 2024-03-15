@@ -42,6 +42,7 @@ public class HttpServerHandler implements Handler<HttpServerRequest> {
                 return;
             }
             try {
+                // todo 本地注册中心优化，使用远程注册中心
                 Class<?> implClass = LocalRegister.get(rpcRequest.getServiceName());
                 Method method = implClass.getMethod(rpcRequest.getMethodName(), rpcRequest.getParameterTypes());
                 Object result = method.invoke(implClass.newInstance(), rpcRequest.getArgs());
