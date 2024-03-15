@@ -12,6 +12,11 @@ import java.util.concurrent.ExecutionException;
  */
 public interface Registry {
 
+    /**
+     * 心跳检测（服务端）
+     */
+    void heartBeat();
+
     void init(RegistryConfig registryConfig);
 
     /**
@@ -37,4 +42,10 @@ public interface Registry {
     List<ServiceMetaInfo> serviceDiscovery(String serviceKey);
 
     void destroy();
+
+    /**
+     * 监听（消费者监听注册中心以维护缓存一致性）
+     * @param serviceNodeKey
+     */
+    void watch(String serviceNodeKey);
 }

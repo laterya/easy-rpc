@@ -9,8 +9,4 @@ import com.yp.example.common.model.User;
 public interface UserService {
 
     public User getUser(User user);
-
-    default int getNumber() {
-        return 1024;
-    }
 }
