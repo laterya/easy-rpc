@@ -1,5 +1,6 @@
 package com.yp.rpc.config;
 
+import com.yp.rpc.loadbalancer.LoadBalancerKeys;
 import com.yp.rpc.serializer.SerializerKeys;
 import lombok.Data;
 
@@ -27,4 +28,6 @@ public class RpcConfig {
     private String serializer = SerializerKeys.JDK;
 
     private RegistryConfig registryConfig = new RegistryConfig();
+
+    private String loadBalancer = LoadBalancerKeys.ROUND_ROBIN;
 }
