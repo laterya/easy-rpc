@@ -8,7 +8,7 @@ import java.util.Map;
 
 /**
  * @author yp
- * @date: 2024/3/16
+ * date: 2024/3/16
  */
 @Slf4j
 public class FailSafeTolerantStrategy implements TolerantStrategy {

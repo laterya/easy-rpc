@@ -11,7 +11,7 @@ import java.util.concurrent.atomic.AtomicInteger;
  * 轮询负载均衡器
  *
  * @author yp
- * @date: 2024/3/15
+ * date: 2024/3/15
  */
 public class RoundRobinLoadBalancer implements LoadBalancer {
 

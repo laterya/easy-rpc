@@ -1,17 +1,19 @@
 package com.yp.rpc.server.tcp.demo;
 
 import io.vertx.core.Vertx;
+import io.vertx.core.net.NetClient;
 import io.vertx.core.net.NetSocket;
 
 /**
  * @author yp
- * @date: 2024/3/15
+ * date: 2024/3/15
  */
 public class VertxTcpClientDemo {
 
     public void start() {
         Vertx vertx = Vertx.vertx();
-        vertx.createNetClient().connect(8090, "localhost", netSocketAsyncResult -> {
+        NetClient netClient = vertx.createNetClient();
+        netClient.connect(8090, "localhost", netSocketAsyncResult -> {
             if (netSocketAsyncResult.succeeded()) {
                 System.out.println("Connected to Tcp server");
                 NetSocket netSocket = netSocketAsyncResult.result();
@@ -25,6 +27,7 @@ public class VertxTcpClientDemo {
                 System.out.println("Failed to connect to Tcp server");
             }
         });
+        netClient.close();
     }
 
     public static void main(String[] args) {

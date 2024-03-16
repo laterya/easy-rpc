@@ -25,9 +25,9 @@
             <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>com.yp</groupId>
-            <artifactId>easy-rpc-spring-boot-starter</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
+            <groupId>io.github.laterya</groupId>
+            <artifactId>easy-rpc-core</artifactId>
+            <version>1.0.0</version>
         </dependency>
         <dependency>
             <groupId>com.yp</groupId>

@@ -8,7 +8,7 @@ import java.util.List;
  * 注册中心服务本地缓存
  *
  * @author yp
- * @date: 2024/3/15
+ * date: 2024/3/15
  */
 public class RegistryServiceCache {
     /**

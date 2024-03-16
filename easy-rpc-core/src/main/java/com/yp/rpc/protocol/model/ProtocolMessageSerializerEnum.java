@@ -11,7 +11,7 @@ import java.util.stream.Collectors;
  * 协议消息状态枚举
  *
  * @author yp
- * @date: 2024/3/15
+ * date: 2024/3/15
  */
 @Getter
 public enum ProtocolMessageSerializerEnum {

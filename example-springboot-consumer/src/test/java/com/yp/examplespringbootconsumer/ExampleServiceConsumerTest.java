@@ -7,7 +7,7 @@ import javax.annotation.Resource;
 
 /**
  * @author yp
- * @date: 2024/3/16
+ * date: 2024/3/16
  */
 @SpringBootTest
 class ExampleServiceConsumerTest {

@@ -1,8 +1,8 @@
-package com.yp.easyrpcspringbootstarter.annotation;
+package com.yp.rpc.annotation;
 
-import com.yp.easyrpcspringbootstarter.bootstrap.RpcConsumerBootstrap;
-import com.yp.easyrpcspringbootstarter.bootstrap.RpcInitBootstrap;
-import com.yp.easyrpcspringbootstarter.bootstrap.RpcProviderBootstrap;
+import com.yp.rpc.bootstrap.RpcConsumerBootstrap;
+import com.yp.rpc.bootstrap.RpcInitBootstrap;
+import com.yp.rpc.bootstrap.RpcProviderBootstrap;
 import org.springframework.context.annotation.Import;
 
 import java.lang.annotation.ElementType;
@@ -12,7 +12,7 @@ import java.lang.annotation.Target;
 
 /**
  * @author yp
- * @date: 2024/3/16
+ * date: 2024/3/16
  */
 @Target(ElementType.TYPE)
 @Retention(RetentionPolicy.RUNTIME)

@@ -8,7 +8,7 @@ import lombok.NoArgsConstructor;
  * 协议消息结构
  *
  * @author yp
- * @date: 2024/3/15
+ * date: 2024/3/15
  */
 @Data
 @AllArgsConstructor

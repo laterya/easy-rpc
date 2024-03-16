@@ -2,7 +2,7 @@ package com.yp.rpc.loadbalancer;
 
 /**
  * @author yp
- * @date: 2024/3/15
+ * date: 2024/3/15
  */
 public interface LoadBalancerKeys {
 

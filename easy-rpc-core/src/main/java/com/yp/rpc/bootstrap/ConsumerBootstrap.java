@@ -4,7 +4,7 @@ import com.yp.rpc.RpcApplication;
 
 /**
  * @author yp
- * @date: 2024/3/16
+ * date: 2024/3/16
  */
 public class ConsumerBootstrap {
 

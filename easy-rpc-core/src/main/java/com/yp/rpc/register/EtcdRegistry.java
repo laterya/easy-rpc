@@ -22,7 +22,7 @@ import java.util.stream.Collectors;
 
 /**
  * @author yp
- * @date: 2024/3/14
+ * date: 2024/3/14
  */
 public class EtcdRegistry implements Registry {
 

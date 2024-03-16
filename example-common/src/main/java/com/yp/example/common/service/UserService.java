@@ -4,7 +4,7 @@ import com.yp.example.common.model.User;
 
 /**
  * @author yp
- * @date: 2024/3/10
+ * date: 2024/3/10
  */
 public interface UserService {
 

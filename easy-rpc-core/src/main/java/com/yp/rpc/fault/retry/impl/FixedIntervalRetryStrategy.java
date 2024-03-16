@@ -10,7 +10,7 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * @author yp
- * @date: 2024/3/16
+ * date: 2024/3/16
  */
 @Slf4j
 public class FixedIntervalRetryStrategy implements RetryStrategy {

@@ -1,6 +1,6 @@
 package com.yp.examplespringbootconsumer;
 
-import com.yp.easyrpcspringbootstarter.annotation.EnableRpc;
+import com.yp.rpc.annotation.EnableRpc;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 

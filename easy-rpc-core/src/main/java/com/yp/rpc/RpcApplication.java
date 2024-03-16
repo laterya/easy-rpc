@@ -11,7 +11,7 @@ import lombok.extern.slf4j.Slf4j;
 
 /**
  * @author yp
- * @date: 2024/3/12
+ * date: 2024/3/12
  */
 @Slf4j
 public class RpcApplication {

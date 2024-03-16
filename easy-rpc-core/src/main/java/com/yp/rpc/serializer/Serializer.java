@@ -4,7 +4,7 @@ import java.io.IOException;
 
 /**
  * @author yp
- * @date: 2024/3/10
+ * date: 2024/3/10
  */
 public interface Serializer {
 

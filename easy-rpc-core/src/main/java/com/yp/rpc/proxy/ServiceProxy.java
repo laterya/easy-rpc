@@ -29,7 +29,7 @@ import java.util.Map;
  * 服务代理（JDK 动态代理）
  *
  * @author yp
- * @date: 2024/3/10
+ * date: 2024/3/10
  */
 public class ServiceProxy implements InvocationHandler {
     @Override

@@ -5,7 +5,7 @@ import com.yp.example.common.service.UserService;
 
 /**
  * @author yp
- * @date: 2024/3/10
+ * date: 2024/3/10
  */
 public class UserServiceImpl implements UserService {
     @Override

@@ -7,7 +7,7 @@ import java.util.Map;
 
 /**
  * @author yp
- * @date: 2024/3/16
+ * date: 2024/3/16
  */
 public class FailFastTolerantStrategy implements TolerantStrategy {
     @Override

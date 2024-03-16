@@ -9,7 +9,7 @@ import io.vertx.core.parsetools.RecordParser;
  * 使用 recordParser 对原有的 buffer 处理能力进行增强
  *
  * @author yp
- * @date: 2024/3/15
+ * date: 2024/3/15
  */
 public class TcpBufferHandlerWrapper implements Handler<Buffer> {
 

@@ -1,6 +1,6 @@
-package com.yp.easyrpcspringbootstarter.bootstrap;
+package com.yp.rpc.bootstrap;
 
-import com.yp.easyrpcspringbootstarter.annotation.RpcReference;
+import com.yp.rpc.annotation.RpcReference;
 import com.yp.rpc.proxy.ServiceProxyFactory;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.config.BeanPostProcessor;
@@ -9,7 +9,7 @@ import java.lang.reflect.Field;
 
 /**
  * @author yp
- * @date: 2024/3/16
+ * date: 2024/3/16
  */
 public class RpcConsumerBootstrap implements BeanPostProcessor {
 

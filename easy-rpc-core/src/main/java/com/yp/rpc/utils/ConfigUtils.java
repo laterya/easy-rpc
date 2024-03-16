@@ -7,7 +7,7 @@ import cn.hutool.setting.dialect.Props;
  * 配置工具类
  *
  * @author yp
- * @date: 2024/3/12
+ * date: 2024/3/12
  */
 public class ConfigUtils {
 

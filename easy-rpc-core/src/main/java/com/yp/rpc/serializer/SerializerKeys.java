@@ -2,7 +2,7 @@ package com.yp.rpc.serializer;
 
 /**
  * @author yp
- * @date: 2024/3/13
+ * date: 2024/3/13
  */
 public interface SerializerKeys {
     String JDK = "jdk";
