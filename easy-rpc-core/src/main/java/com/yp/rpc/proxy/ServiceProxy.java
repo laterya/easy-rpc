@@ -6,6 +6,8 @@ import com.yp.rpc.config.RpcConfig;
 import com.yp.rpc.constant.RpcConstant;
 import com.yp.rpc.fault.retry.RetryStrategy;
 import com.yp.rpc.fault.retry.RetryStrategyFactory;
+import com.yp.rpc.fault.tolerant.TolerantStrategy;
+import com.yp.rpc.fault.tolerant.TolerantStrategyFactory;
 import com.yp.rpc.loadbalancer.LoadBalancer;
 import com.yp.rpc.loadbalancer.LoadBalancerFactory;
 import com.yp.rpc.model.RpcRequest;
@@ -60,8 +62,14 @@ public class ServiceProxy implements InvocationHandler {
             ServiceMetaInfo selectedServiceMetaInfo = loadBalancer.select(requestParams, serviceMetaInfoList);
 
             // 发送 TCP 请求
-            RetryStrategy retryStrategy = RetryStrategyFactory.getInstance(rpcConfig.getRetryStrategy());
-            RpcResponse rpcResponse = retryStrategy.doRetry(() -> VertxTcpClient.doRequest(rpcRequest, selectedServiceMetaInfo));
+            RpcResponse rpcResponse;
+            try {
+                RetryStrategy retryStrategy = RetryStrategyFactory.getInstance(rpcConfig.getRetryStrategy());
+                rpcResponse = retryStrategy.doRetry(() -> VertxTcpClient.doRequest(rpcRequest, selectedServiceMetaInfo));
+            } catch (Exception e) {
+                TolerantStrategy tolerantStrategy = TolerantStrategyFactory.getInstance(rpcConfig.getTolerantStrategy());
+                rpcResponse = tolerantStrategy.doTolerant(null, e);
+            }
             return rpcResponse.getData();
         } catch (Exception e) {
             e.printStackTrace();

@@ -1,0 +1,2 @@
+failFast=com.yp.rpc.fault.tolerant.impl.FailFastTolerantStrategy
+failSafe=com.yp.rpc.fault.tolerant.impl.FailSafeTolerantStrategy
