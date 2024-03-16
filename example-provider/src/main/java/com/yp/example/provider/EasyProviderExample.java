@@ -1,14 +1,11 @@
 package com.yp.example.provider;
 
 import com.yp.example.common.service.UserService;
-import com.yp.rpc.RpcApplication;
-import com.yp.rpc.config.RegistryConfig;
-import com.yp.rpc.config.RpcConfig;
-import com.yp.rpc.model.ServiceMetaInfo;
-import com.yp.rpc.register.LocalRegister;
-import com.yp.rpc.register.RegisterFactory;
-import com.yp.rpc.register.Registry;
-import com.yp.rpc.server.tcp.VertxTcpServer;
+import com.yp.rpc.bootstrap.ProviderBootstrap;
+import com.yp.rpc.model.ServiceRegisterInfo;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @author yp
@@ -17,24 +14,10 @@ import com.yp.rpc.server.tcp.VertxTcpServer;
 public class EasyProviderExample {
 
     public static void main(String[] args) {
-        RpcApplication.init();
-        LocalRegister.register(UserService.class.getName(), UserServiceImpl.class);
-        RpcConfig rpcConfig = RpcApplication.getRpcConfig();
-        RegistryConfig registryConfig = rpcConfig.getRegistryConfig();
-        Registry instance = RegisterFactory.getInstance(registryConfig.getRegistry());
+        List<ServiceRegisterInfo<?>> serviceRegisterInfoList = new ArrayList<>();
+        ServiceRegisterInfo<UserService> serviceRegisterInfo = new ServiceRegisterInfo<>(UserService.class.getName(), UserServiceImpl.class);
+        serviceRegisterInfoList.add(serviceRegisterInfo);
 
-        ServiceMetaInfo serviceMetaInfo = new ServiceMetaInfo();
-        serviceMetaInfo.setServiceName(UserService.class.getName());
-        serviceMetaInfo.setServiceAddress(rpcConfig.getServerHost() + ":" + rpcConfig.getServerPort());
-        serviceMetaInfo.setServiceHost(rpcConfig.getServerHost());
-        serviceMetaInfo.setServicePort(rpcConfig.getServerPort());
-
-        try {
-            instance.register(serviceMetaInfo);
-        } catch (Exception e) {
-            throw new RuntimeException("注册服务失败", e);
-        }
-        VertxTcpServer vertxTcpServer = new VertxTcpServer();
-        vertxTcpServer.doStart(RpcApplication.getRpcConfig().getServerPort());
+        ProviderBootstrap.init(serviceRegisterInfoList);
     }
 }
