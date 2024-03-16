@@ -6,7 +6,7 @@ import java.io.*;
 
 /**
  * @author yp
- * @date: 2024/3/10
+ * date: 2024/3/10
  */
 public class JdkSerializer implements Serializer {
     @Override

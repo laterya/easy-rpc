@@ -1,4 +1,4 @@
-package com.yp.easyrpcspringbootstarter.annotation;
+package com.yp.rpc.annotation;
 
 import com.yp.rpc.constant.RpcConstant;
 import org.springframework.stereotype.Component;
@@ -10,7 +10,7 @@ import java.lang.annotation.Target;
 
 /**
  * @author yp
- * @date: 2024/3/16
+ * date: 2024/3/16
  */
 @Target(ElementType.TYPE)
 @Retention(RetentionPolicy.RUNTIME)

@@ -10,7 +10,7 @@ import lombok.Data;
  * RPC 的相关配置
  *
  * @author yp
- * @date: 2024/3/12
+ * date: 2024/3/12
  */
 @Data
 public class RpcConfig {

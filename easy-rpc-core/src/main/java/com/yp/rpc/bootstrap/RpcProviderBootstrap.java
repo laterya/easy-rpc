@@ -1,6 +1,6 @@
-package com.yp.easyrpcspringbootstarter.bootstrap;
+package com.yp.rpc.bootstrap;
 
-import com.yp.easyrpcspringbootstarter.annotation.RpcService;
+import com.yp.rpc.annotation.RpcService;
 import com.yp.rpc.RpcApplication;
 import com.yp.rpc.config.RegistryConfig;
 import com.yp.rpc.config.RpcConfig;
@@ -14,7 +14,7 @@ import org.springframework.beans.factory.config.BeanPostProcessor;
 
 /**
  * @author yp
- * @date: 2024/3/16
+ * date: 2024/3/16
  */
 @Slf4j
 public class RpcProviderBootstrap implements BeanPostProcessor {

@@ -6,7 +6,7 @@ import java.util.concurrent.Callable;
 
 /**
  * @author yp
- * @date: 2024/3/16
+ * date: 2024/3/16
  */
 public interface RetryStrategy {
     RpcResponse doRetry(Callable<RpcResponse> callable) throws Exception;

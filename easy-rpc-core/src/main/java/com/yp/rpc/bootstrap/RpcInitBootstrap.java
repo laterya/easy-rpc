@@ -1,6 +1,6 @@
-package com.yp.easyrpcspringbootstarter.bootstrap;
+package com.yp.rpc.bootstrap;
 
-import com.yp.easyrpcspringbootstarter.annotation.EnableRpc;
+import com.yp.rpc.annotation.EnableRpc;
 import com.yp.rpc.RpcApplication;
 import com.yp.rpc.config.RpcConfig;
 import com.yp.rpc.server.tcp.VertxTcpServer;
@@ -11,7 +11,7 @@ import org.springframework.core.type.AnnotationMetadata;
 
 /**
  * @author yp
- * @date: 2024/3/16
+ * date: 2024/3/16
  */
 @Slf4j
 public class RpcInitBootstrap implements ImportBeanDefinitionRegistrar {

@@ -1,4 +1,4 @@
-package com.yp.easyrpcspringbootstarter.annotation;
+package com.yp.rpc.annotation;
 
 import com.yp.rpc.constant.RpcConstant;
 import com.yp.rpc.fault.retry.RetryStrategyKeys;
@@ -12,7 +12,7 @@ import java.lang.annotation.Target;
 
 /**
  * @author yp
- * @date: 2024/3/16
+ * date: 2024/3/16
  */
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.FIELD)

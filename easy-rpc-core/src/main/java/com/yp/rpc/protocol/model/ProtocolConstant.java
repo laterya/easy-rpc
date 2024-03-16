@@ -2,7 +2,7 @@ package com.yp.rpc.protocol.model;
 
 /**
  * @author yp
- * @date: 2024/3/15
+ * date: 2024/3/15
  */
 public interface ProtocolConstant {
 

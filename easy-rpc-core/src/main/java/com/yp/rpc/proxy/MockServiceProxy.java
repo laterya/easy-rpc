@@ -7,7 +7,7 @@ import java.lang.reflect.Method;
 
 /**
  * @author yp
- * @date: 2024/3/13
+ * date: 2024/3/13
  */
 @Slf4j
 public class MockServiceProxy implements InvocationHandler {

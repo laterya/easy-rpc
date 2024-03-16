@@ -9,7 +9,7 @@ import java.util.Random;
 
 /**
  * @author yp
- * @date: 2024/3/15
+ * date: 2024/3/15
  */
 public class RandomLoadBalancer implements LoadBalancer {
 

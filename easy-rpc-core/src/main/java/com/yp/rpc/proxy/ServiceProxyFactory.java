@@ -8,7 +8,7 @@ import java.lang.reflect.Proxy;
  * 动态代理类工厂
  *
  * @author yp
- * @date: 2024/3/10
+ * date: 2024/3/10
  */
 public class ServiceProxyFactory {
 

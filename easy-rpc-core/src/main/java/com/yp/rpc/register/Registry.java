@@ -8,7 +8,7 @@ import java.util.concurrent.ExecutionException;
 
 /**
  * @author yp
- * @date: 2024/3/14
+ * date: 2024/3/14
  */
 public interface Registry {
 

@@ -17,7 +17,7 @@ import java.util.concurrent.ConcurrentHashMap;
  * SPI 加载器(支持键值对映射)
  *
  * @author yp
- * @date: 2024/3/13
+ * date: 2024/3/13
  */
 @Slf4j
 public class SpiLoader {
